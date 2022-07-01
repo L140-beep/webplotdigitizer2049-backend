@@ -25,5 +25,10 @@ def index():
     # print(json_data['image'])
     return 'hello, world!'   
 
+@app.route('/', methods=["GET"])
+@cross_origin()
+def get():
+    return("ok, the server is working, what's next?")
+
 if (__name__ == '__main__'):
     app.run()
