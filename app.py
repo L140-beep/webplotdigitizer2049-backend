@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import base64
