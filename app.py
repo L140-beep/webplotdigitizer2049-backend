@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import base64
-import cv2
+#import cv2
 import numpy as np
 import json
 
@@ -26,7 +26,6 @@ def index():
     return 'hello, world!'   
 
 @app.route('/', methods=["GET"])
-@cross_origin()
 def get():
     return("ok, the server is working, what's next?")
 
