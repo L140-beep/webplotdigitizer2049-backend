@@ -5,6 +5,7 @@ import cv2
 import numpy as np
 import json
 import plotdigitizer
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 cors = CORS(app)
