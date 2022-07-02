@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import base64
-#import cv2
+import cv2
 import numpy as np
 import json
 
