@@ -1,3 +1,9 @@
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import cv2
+import numpy as np
+
 def do_magic(img, color, dots):
     
     return("IT'S REAL MAGIC!")
