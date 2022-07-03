@@ -1,5 +1,3 @@
-import matplotlib
-matplotlib.use('Agg')
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import base64
@@ -7,7 +5,6 @@ import cv2
 import numpy as np
 import json
 import plotdigitizer
-import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 cors = CORS(app)
