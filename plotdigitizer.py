@@ -85,11 +85,11 @@ def line(image, color, dots):
       end = x == len(edges[0]-start_x)
       if end:
         break
-      if edges[y-i,x] == 255 and euclidean(tuple(img[y-i, x]), bars[0]) < distance:
+      if edges[y-i,x] == 255 and euclidean(tuple(img[y-i, x]), color) < distance:
         Y2.append(y-i)
         X2.append(x)
         break
-      if edges[y+i,x] == 255 and euclidean(tuple(img[y+i, x]), bars[0]) < distance:
+      if edges[y+i,x] == 255 and euclidean(tuple(img[y+i, x]), color) < distance:
         Y2.append(y+i)
         X2.append(x)
         break
@@ -106,11 +106,11 @@ def line(image, color, dots):
       end = x == start_x
       if end:
         break
-      if edges[y-i,x] == 255 and euclidean(tuple(img[y-i, x]), bars[0]) < distance:
+      if edges[y-i,x] == 255 and euclidean(tuple(img[y-i, x]), color) < distance:
         Y1.append(y-i)
         X1.append(x)
         break
-      if edges[y+i,x] == 255 and euclidean(tuple(img[y+i, x]), bars[0]) < distance:
+      if edges[y+i,x] == 255 and euclidean(tuple(img[y+i, x]), color) < distance:
         Y1.append(y+i)
         X1.append(x)
         break
@@ -246,11 +246,11 @@ def line_filled(image, color, dots):
       end = x == start_x
       if end:
         break
-      if edges[y-i,x] == 255 and euclidean(tuple(img[y-i, x]), bars[0]) < distance:
+      if edges[y-i,x] == 255 and euclidean(tuple(img[y-i, x]), color) < distance:
         Y1.append(y-i)
         X1.append(x)
         break
-      if edges[y+i,x] == 255 and euclidean(tuple(img[y+i, x]), bars[0]) < distance:
+      if edges[y+i,x] == 255 and euclidean(tuple(img[y+i, x]), color) < distance:
         Y1.append(y+i)
         X1.append(x)
         break
