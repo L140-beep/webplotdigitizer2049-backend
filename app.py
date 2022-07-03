@@ -21,10 +21,19 @@ def index():
     np_data = np.fromstring(decoded_data,np.uint8)
     color = data['color']
     dots = data['dots']
+    graph_type = data['type']
     img = cv2.imdecode(np_data,cv2.IMREAD_UNCHANGED)
-
-    return plotdigitizer.do_magic(img, color, dots)
-
+    
+    if(graph_type == 'line'):
+        return plotdigitizer.line(img, color, dots)
+    elif(graph_type == 'points'):
+        return plotdigitizer.points(img, color, dots)
+    elif(graph_type == 'line_filled'):
+        return plotdigitizer.line_filled(img, color, dots)
+    elif(graph_type == 'barplot'):
+        return plotdigitizer.barplot(img, color, dots)
+    else:
+        return('NOT SUPPORTED')
 @app.route('/', methods=["GET"])
 def get():
     return("ok, the server is working, what's next?")
