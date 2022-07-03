@@ -25,13 +25,13 @@ def index():
     img = cv2.imdecode(np_data,cv2.IMREAD_UNCHANGED)
     
     if(graph_type == 'line'):
-        return json.dumps({"dataset" :plotdigitizer.line(img, color, dots)})
+        return json.dumps({"dataset" :plotdigitizer.line(img, color[0], dots)})
     elif(graph_type == 'points'):
-        return json.dumps({"dataset" :plotdigitizer.points(img, color, dots)})
+        return json.dumps({"dataset" :plotdigitizer.points(img, color[0], dots)})
     elif(graph_type == 'line_filled'):
-        return json.dumps({"dataset" :plotdigitizer.line_filled(img, color, dots)})
+        return json.dumps({"dataset" :plotdigitizer.line_filled(img, color[0], dots)})
     elif(graph_type == 'barplot'):
-        return json.dumps({"dataset" : plotdigitizer.barplot(img, color, dots)})
+        return json.dumps({"dataset" : plotdigitizer.barplot(img, color[0], dots)})
     else:
         return('NOT SUPPORTED')
 @app.route('/', methods=["GET"])
